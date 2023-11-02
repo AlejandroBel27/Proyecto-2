@@ -222,6 +222,11 @@ public class FrmMain extends javax.swing.JFrame {
 
         txtCurp.setBackground(new java.awt.Color(242, 242, 242));
         txtCurp.setForeground(new java.awt.Color(1, 17, 17));
+        txtCurp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCurpActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel8.setText("Apellido M");
@@ -350,7 +355,7 @@ public class FrmMain extends javax.swing.JFrame {
                 .addGroup(pnlConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(jLabel9)
-                    .addComponent(btnBuscarCurp))
+                    .addComponent(btnBuscarCurp, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtApellidoM, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -796,6 +801,10 @@ public class FrmMain extends javax.swing.JFrame {
         pnlLogo.setVisible(false);
         pnlResultadoFiltro.setVisible(true);
     }//GEN-LAST:event_btnGenerarNombreActionPerformed
+
+    private void txtCurpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCurpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCurpActionPerformed
 
     /**
      * @param args the command line arguments
