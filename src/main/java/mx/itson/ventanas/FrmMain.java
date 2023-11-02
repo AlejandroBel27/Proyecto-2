@@ -93,7 +93,6 @@ public class FrmMain extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 51, 51));
         setMaximumSize(new java.awt.Dimension(1440, 800));
         setMinimumSize(new java.awt.Dimension(1440, 800));
-        setPreferredSize(new java.awt.Dimension(1440, 800));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -105,6 +104,7 @@ public class FrmMain extends javax.swing.JFrame {
         btnPlacas.setBackground(new java.awt.Color(242, 242, 242));
         btnPlacas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnPlacas.setForeground(new java.awt.Color(17, 17, 17));
+        btnPlacas.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\main\\java\\mx\\itson\\imagenes\\iconPlacas.png"));
         btnPlacas.setText("Placas");
         btnPlacas.setBorder(null);
         btnPlacas.setFocusable(false);
@@ -120,6 +120,7 @@ public class FrmMain extends javax.swing.JFrame {
         btnInicio.setBackground(new java.awt.Color(242, 242, 242));
         btnInicio.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnInicio.setForeground(new java.awt.Color(17, 17, 17));
+        btnInicio.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\main\\java\\mx\\itson\\imagenes\\iconHome.png"));
         btnInicio.setText("Inicio");
         btnInicio.setBorder(null);
         btnInicio.setFocusable(false);
@@ -135,6 +136,7 @@ public class FrmMain extends javax.swing.JFrame {
         btnLicencia.setBackground(new java.awt.Color(242, 242, 242));
         btnLicencia.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnLicencia.setForeground(new java.awt.Color(17, 17, 17));
+        btnLicencia.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\main\\java\\mx\\itson\\imagenes\\iconLicencia.png"));
         btnLicencia.setText("Licencia");
         btnLicencia.setBorder(null);
         btnLicencia.setFocusable(false);
@@ -405,11 +407,6 @@ public class FrmMain extends javax.swing.JFrame {
         cbxTramite.setBackground(new java.awt.Color(242, 242, 242));
         cbxTramite.setForeground(new java.awt.Color(17, 17, 17));
         cbxTramite.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tramite de placas", "Tramite de licencia" }));
-        cbxTramite.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbxTramiteActionPerformed(evt);
-            }
-        });
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel16.setText("TIPO DE TRAMITE");
@@ -571,7 +568,7 @@ public class FrmMain extends javax.swing.JFrame {
         pnlLogo.setMinimumSize(new java.awt.Dimension(1010, 710));
         pnlLogo.setPreferredSize(new java.awt.Dimension(1010, 710));
 
-        jLabel3.setText("IMAGEN LOGO SONORA");
+        jLabel3.setIcon(new javax.swing.ImageIcon(System.getProperty("user.dir")+"\\src\\main\\java\\mx\\itson\\imagenes\\logoSonora.png"));
 
         javax.swing.GroupLayout pnlLogoLayout = new javax.swing.GroupLayout(pnlLogo);
         pnlLogo.setLayout(pnlLogoLayout);
@@ -728,47 +725,73 @@ public class FrmMain extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnInicioActionPerformed
 
+    /**
+     * Botón para acceder a la ventana con el formulario para la obtención de placas.
+     * @param evt Acción que detonará el evento.
+     */
     private void btnPlacasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlacasActionPerformed
         pnlInicio.setVisible(false);
         pnlLicencia.setVisible(false);
         pnlPlacas.setVisible(true);
     }//GEN-LAST:event_btnPlacasActionPerformed
-
+    /**
+     * Botón para acceder a la ventana con el formulario para la obtención de licencia.
+     * @param evt Acción que detonará el evento.
+     */
     private void btnLicenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLicenciaActionPerformed
         pnlInicio.setVisible(false);
         pnlLicencia.setVisible(true);
         pnlPlacas.setVisible(false);
     }//GEN-LAST:event_btnLicenciaActionPerformed
 
+    /**
+     * Botón con el que se buscará a un usuario registrado en base a su fecha de nacimiento.
+     * @param evt Acción que detonará el evento.
+     */
     private void btnBuscarFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarFechaActionPerformed
         pnlLogo.setVisible(false);
         pnlResultadoFiltro.setVisible(true);
     }//GEN-LAST:event_btnBuscarFechaActionPerformed
-
+    
+    /**
+     * Botón con el que se buscará a un usuario registrado en base a su fecha de nacimiento.
+     * @param evt Acción que detonará el evento.
+     */
     private void btnBuscarNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarNombreActionPerformed
         pnlLogo.setVisible(false);
         pnlResultadoFiltro.setVisible(true);
     }//GEN-LAST:event_btnBuscarNombreActionPerformed
 
+     /**
+     * Botón con el que se buscará a un usuario registrado en base a su CURP.
+     * @param evt Acción que detonará el evento.
+     */   
     private void btnBuscarCurpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarCurpActionPerformed
         pnlLogo.setVisible(false);
         pnlResultadoFiltro.setVisible(true);
     }//GEN-LAST:event_btnBuscarCurpActionPerformed
-
+    
+    /**
+     * Botón con el que se generará un reporte en base al periodo que se ingrese.
+     * @param evt Acción que detonará el evento.
+     */
     private void btnGenerarPTiempoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarPTiempoActionPerformed
         pnlLogo.setVisible(false);
         pnlResultadoFiltro.setVisible(true);
     }//GEN-LAST:event_btnGenerarPTiempoActionPerformed
-
+    /**
+     * Botón con el que se generará un reporte en base al tipo de trámite que se ingrese.
+     * @param evt Acción que detonará el evento.
+     */
     private void btnGenerarTramiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarTramiteActionPerformed
         pnlLogo.setVisible(false);
         pnlResultadoFiltro.setVisible(true);
     }//GEN-LAST:event_btnGenerarTramiteActionPerformed
 
-    private void cbxTramiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxTramiteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbxTramiteActionPerformed
-
+    /**
+     * Botón con el que se generará un reporte en base al nombre que se ingrese.
+     * @param evt Acción que detonará el evento.
+     */    
     private void btnGenerarNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarNombreActionPerformed
         pnlLogo.setVisible(false);
         pnlResultadoFiltro.setVisible(true);
