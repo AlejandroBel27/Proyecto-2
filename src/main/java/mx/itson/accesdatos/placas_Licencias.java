@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author cocob
+ * @author Equipo 3
  */
 
 public class placas_Licencias implements Serializable {
