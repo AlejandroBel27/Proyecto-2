@@ -6,7 +6,7 @@ package mx.itson.proyecto2;
 
 /**
  *
- * @author cocob
+ * @author Equipo 3 
  */
 public class Proyecto2 {
 

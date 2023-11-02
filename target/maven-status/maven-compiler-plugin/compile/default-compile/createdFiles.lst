@@ -1,5 +1,8 @@
+DAOs\licenciaDao.class
+DAOs\placaDao.class
 mx\itson\entidades\Licencia.class
 mx\itson\entidades\Persona.class
+DAOs\automovilDao.class
 mx\itson\ventanas\FrmMain$6.class
 mx\itson\ventanas\FrmMain$2.class
 mx\itson\ventanas\FrmMain$8.class
@@ -7,6 +10,7 @@ mx\itson\proyecto2\Proyecto2.class
 mx\itson\ventanas\FrmMain$7.class
 mx\itson\ventanas\FrmMain$3.class
 mx\itson\ventanas\FrmMain$10.class
+DAOs\personaDao.class
 mx\itson\ventanas\FrmMain$9.class
 mx\itson\ventanas\FrmMain$4.class
 mx\itson\ventanas\FrmMain.class
